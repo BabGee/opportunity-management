@@ -1,5 +1,9 @@
 # Opportunity Management System
 
+## Hosted at 
+
+ https://opportunitymanagement.pythonanywhere.com/
+
 Opportunity management is a web-based system with the following functionalities.
 1. Register new users.
 2. Log in registered users.
@@ -24,6 +28,12 @@ Get a local copy of the project directory by cloning "opportunity-management" fr
 
 ```bash
 git clone git@github.com:BabGee/opportunity-management.git
+```
+
+cd into the folder
+
+```bash
+cd opportunity-management
 ```
 
 I use pipenv for developing this project so I recommend you to create a virtual environment and activate it.

@@ -25,5 +25,6 @@ urlpatterns = [
     path('create_account', opportunities_views.create_account, name='create_account'),
     path('create_opportunity', opportunities_views.create_opportunity, name='create_opportunity'),
     path('user/signup/', users_views.signup_view, name='signup'),
-    path('user/login', users_views.user_login, name='login')
+    path('user/login', users_views.user_login, name='login'),
+    path('user/logout/', users_views.user_logout, name='logout')
 ]

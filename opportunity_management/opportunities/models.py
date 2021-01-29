@@ -16,7 +16,8 @@ class Account(models.Model):
 
 class Opportunity(models.Model):
 	name = models.CharField(max_length=100)
-	description = models.TextField(max_length=500, default='')
+	description = models.TextField()
+	requirements = models.TextField(default='')
 	account = models.ForeignKey(Account, on_delete=models.CASCADE)
 	ammount = models.IntegerField(blank=True, null=True)
 	stage = models.CharField(max_length=20, choices=STAGE_CHOICES, default='D')

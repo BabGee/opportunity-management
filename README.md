@@ -21,6 +21,7 @@ You will find hereafter what I use to develop and to run the project
 ### Installation
 
 Get a local copy of the project directory by cloning "opportunity-management" from github.
+
 ```bash
 git clone git@github.com:BabGee/opportunity-management.git
 ```
@@ -38,12 +39,29 @@ python -m pip install -r requirements.txt
 ```
 
 Then follow these steps:
-1. Move to root folder `cd opportunity_management`
-2. Create a `.env` file in the root folder, provide the required database information  to the `.env` file (.env.example file is provided to help set this information)
-3. Create the tables with the django command line `python manage.py makemigrations` then `python manage.py migrate`
-4. Create your admin log in credentials `python manage.py createsuperuser`
-5. Finally, run the django server `python manage.py runserver `
+1. Move to root folder 
 
+```bash
+cd opportunity_management
+```
+2. Create a `.env` file in the root folder, provide the required database information  to the `.env` file (.env.example file is provided to help set this information)
+
+3. Create the tables with the django command line
+
+```bash
+python manage.py makemigrations
+```
+then migrate the changes
+ 
+```bash
+python manage.py migrate
+```
+
+5. Finally, run the django server
+
+```bash
+python manage.py runserver
+```
 
 ## Built With
 

@@ -1,0 +1,49 @@
+{% extends 'opportunities/base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block title %} opportunities | Home {% endblock %}
+
+{% block content %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-3">A Warm Welcome!</h1>
+        <p class="lead">Hello {{request.user.username}}, manage accounts and opportunities.</p>
+        <a href="{% url 'create_account' %}" class="btn btn-primary btn-lg">Create Account</a>
+        <a href="{% url 'create_opportunity' %}" class="btn btn-primary btn-lg">Create Opportunity</a>
+      </header>
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        {% for opportunity in  all_opportunities %}
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">{{opportunity.name}} for {{opportunity.account.name}}</h4>
+                <p class="card-text">{{opportunity.description}}</p>
+                <p class="card-text">Salary KSHS {{opportunity.ammount|intcomma}}</p>
+                <p class="card-text">Stage {{opportunity.get_stage_display}}</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Find Out More!</a>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+ {% endblock content %}   

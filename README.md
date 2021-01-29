@@ -57,7 +57,7 @@ then migrate the changes
 python manage.py migrate
 ```
 
-5. Finally, run the django server
+4. Finally, run the django server
 
 ```bash
 python manage.py runserver
